@@ -90,6 +90,10 @@ gws sheets spreadsheets-values get --params '{"spreadsheetId": "ID", "range": "S
 - **OpenClaw**: https://openclaw.ai
 - **ClawHub**: https://clawhub.com
 
+## Disclaimer
+
+The `gws` CLI is **not an officially supported Google product**. See the [upstream repository](https://github.com/googleworkspace/cli) for details.
+
 ## License
 
 MIT

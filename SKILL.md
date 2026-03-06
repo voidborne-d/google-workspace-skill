@@ -49,6 +49,11 @@ Complete auth on a machine with a browser, then export:
 gws auth export --unmasked > credentials.json
 ```
 
+> **Security notes:**
+> - Set file permissions: `chmod 600 credentials.json`
+> - Do not commit credential files to git — add `credentials.json` to your `.gitignore`
+> - For production environments, prefer using a service account instead of user credentials
+
 On the headless server:
 
 ```bash
@@ -211,7 +216,7 @@ gws docs documents batchUpdate \
 gws chat spaces list
 
 # Send a message
-gws chat spaces-messages create \
+gws chat spaces messages create \
   --params '{"parent": "spaces/SPACE_ID"}' \
   --json '{"text": "Deploy complete ✅"}'
 ```
@@ -274,6 +279,10 @@ gws drive files delete --params '{"fileId": "FILE_ID"}' --dry-run
 ## Recipes
 
 For 50+ ready-made workflow recipes (label & archive emails, organize Drive folders, schedule meetings, etc.), see the [official recipe library](https://github.com/googleworkspace/cli/tree/main/skills).
+
+## Disclaimer
+
+The `gws` CLI is **not an officially supported Google product**. It is a community/experimental tool. Use at your own discretion, and refer to the [upstream repository](https://github.com/googleworkspace/cli) for license and support details.
 
 ## Troubleshooting
 
